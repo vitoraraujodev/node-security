@@ -29,7 +29,7 @@ class App {
 
   middlewares() {
     this.server.use(Sentry.Handlers.requestHandler());
-    // Aqui coloca o endereço da aplicação React (cors({origin: 'https://...'}))
+    // Para segurança, this.server.use(cors({ origin: 'https://seusite.com' }));
     this.server.use(cors());
     this.server.use(helmet());
     this.server.use(express.json());
